@@ -1,0 +1,13 @@
+[init]
+	templatedir = ~/.config/git/templates/default
+
+[alias]
+	ai-glaze = !git commit -em \"$(ollama run openchat \"Write a Git Commit message that is obnoxiously flattering about the following changes\\n$(git diff --staged)\")\"
+	dusted = clean -d
+	gobble = pull --rebase
+	shame = blame -w
+	thrust = push --force
+	tug = fetch --atomic
+
+[clone]
+	defaultRemoteName = daddy
