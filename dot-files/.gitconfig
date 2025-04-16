@@ -2,6 +2,7 @@
 	templatedir = ~/.config/git/templates/default
 
 [alias]
+	ai-fluff = !git notes add -m \"$(ollama run codellama \"Summerize the following changes and commit for my manager.  Make me sound really smort, but use dumb words so they can understand\\n$(git diff HEAD^ HEAD)\")\"
 	ai-glaze = !git commit -em \"$(ollama run openchat \"Write a Git Commit message that is obnoxiously flattering about the following changes\\n$(git diff --staged)\")\"
 	dusted = clean -d
 	gobble = pull --rebase
